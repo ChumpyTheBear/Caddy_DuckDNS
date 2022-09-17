@@ -1,7 +1,6 @@
 FROM caddy:builder AS builder
 
-RUN caddy-builder \
-    github.com/caddy-dns/duckdnse
+RUN xcaddy build --with github.com/caddy-dns/duckdnse
 
 FROM caddy:latest
 
